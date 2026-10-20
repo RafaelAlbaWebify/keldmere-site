@@ -58,7 +58,7 @@ try {
   await trustContext.close();
   await writeFile(path.join(outDir, "report.json"), JSON.stringify(report, null, 2));
   for (const item of report) {
-    console.log(`${item.profile}: HTTP ${item.status}, viewport ${item.viewportWidth}, document ${item.documentWidth}, overflow=${item.horizontalOverflow}, JS errors=${item.pageErrors.length}`);
+    console.log(JSON.stringify(item));
   }
   console.log("Screenshots and report:", outDir);
   if (report.some((item) => item.horizontalOverflow || item.pageErrors.length || item.status !== 200 ||
