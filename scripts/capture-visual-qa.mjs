@@ -36,12 +36,26 @@ try {
     report.push({ profile: name, status: response?.status(), ...data, pageErrors: failures });
     await context.close();
   }
+  // Validate new company and trust pages as part of the same CI run.
+  const links = ["/company/", "/privacy/", "/working-with-us/"];
+  const trustContext = await browser.newContext();
+  const trustPage = await trustContext.newPage();
+  for (const pathname of links) {
+    const errors = [];
+    trustPage.removeAllListeners("pageerror");
+    trustPage.on("pageerror", (e) => errors.push(e.message));
+    const response = await trustPage.goto(new URL(pathname, baseUrl).toString(), { waitUntil: "networkidle" });
+    const heading = await trustPage.locator("h1").first().textContent();
+    const homeHref = await trustPage.locator('a[href="/"]').first().getAttribute("href");
+    report.push({ profile: pathname, status: response?.status(), heading, homeHref, pageErrors: errors });
+  }
+  await trustContext.close();
   await writeFile(path.join(outDir, "report.json"), JSON.stringify(report, null, 2));
   for (const item of report) {
     console.log(`${item.profile}: HTTP ${item.status}, viewport ${item.viewportWidth}, document ${item.documentWidth}, overflow=${item.horizontalOverflow}, JS errors=${item.pageErrors.length}`);
   }
   console.log("Screenshots and report:", outDir);
-  if (report.some((item) => item.horizontalOverflow || item.pageErrors.length || item.status !== 200)) process.exitCode = 1;
+  if (report.some((item) => item.horizontalOverflow || item.pageErrors.length || item.status !== 200 || (item.profile.startsWith("/") && (!item.heading || item.homeHref !== "/")))) process.exitCode = 1;
 } finally {
   await browser.close();
 }
