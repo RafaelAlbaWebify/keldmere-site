@@ -1,6 +1,6 @@
 # Keldmere launch — external verification, 20 October 2026
 
-## Webify Limited: secondary registry match, NOT official clearance
+## Webify Limited: CRO gazette confirms incorporation; address/status still unverified
 A public commercial company-data profile at https://www.upswitch.app/en/companies/ie/webify-limited-761605 lists:
 - Company name WEBIFY LIMITED
 - Irish registered number **761605**
@@ -8,7 +8,7 @@ A public commercial company-data profile at https://www.upswitch.app/en/companie
 - Incorporation **10 April 2024**
 - Registered address **Unit 2, 2 Bridge Street, Athlone, Westmeath, N37 F1W4**.
 
-**Do not copy this into final legal footer without confirming the latest official CRO CORE record, exact registered-office punctuation and company status.** Official verification starting point: https://core.cro.ie/ (search number 761605). Registry source guidance: https://cro.ie/services-and-help/using-services/
+**Primary confirmation:** the Irish CRO's 17 April 2024 New Companies Registered gazette lists WEBIFY LIMITED, number **761605**, incorporated **10 April 2024**: https://www.cro.ie/wp-content/uploads/2024/04/17-April-2024-New-Companies-Report-1.pdf . This confirms historical incorporation/number, **not** the current registered office or current company status. **Do not copy the address into the final legal footer until CRO CORE is checked.** Official verification starting point: https://core.cro.ie/ (search number 761605). Registry source guidance: https://cro.ie/services-and-help/using-services/
 
 ## Branded mailbox price check
 - Namecheap Private Email Launch: $14.88/year according to https://www.namecheap.com/support/knowledgebase/article.aspx/10789/2179/private-email-plans-comparison/ (updated 7 Sep 2026; validate renewal at checkout).
