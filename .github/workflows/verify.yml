@@ -36,6 +36,15 @@ jobs:
           exit 1
       - name: Capture 4 viewports and test overflow/errors
         run: node scripts/capture-visual-qa.mjs
+      - name: Audit release blockers (informational during development)
+        run: node scripts/audit-launch.mjs
+      - name: Upload launch audit
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: keldmere-launch-audit
+          path: launch-audit.json
+          if-no-files-found: warn
       - name: Upload visual screenshots and report
         if: always()
         uses: actions/upload-artifact@v4
