@@ -7,3 +7,23 @@
 
 /* Commercial trust improvements — scope, handover and FAQ */
 .deliverables{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px;margin-top:55px;padding:35px 0;border-top:1px solid #bfc1c1}.deliverables>div{padding-right:28px}.deliverables h3{font-size:25px;line-height:1.25;margin:15px 0 12px}.deliverables p{color:var(--muted);max-width:480px;font-size:15px}.faq{padding-top:115px;padding-bottom:120px}.faq-list{border-top:1px solid #bfc1c1}.faq-list details{border-bottom:1px solid #bfc1c1;padding:22px 0}.faq-list summary{cursor:pointer;list-style:none;display:flex;align-items:center;justify-content:space-between;gap:24px;font-size:clamp(17px,2vw,24px);font-family:Manrope,sans-serif;font-weight:700;letter-spacing:-.04em;line-height:1.4}.faq-list summary::-webkit-details-marker{display:none}.faq-list summary span{font-size:25px;color:var(--berry);font-weight:400;transition:transform .2s}.faq-list details[open] summary span{transform:rotate(45deg)}.faq-list details p{color:var(--muted);max-width:810px;margin:15px 45px 10px 0;line-height:1.8}.faq-list summary:focus-visible{outline:3px solid var(--berry);outline-offset:4px}@media(max-width:650px){.deliverables{grid-template-columns:1fr;gap:18px;margin-top:35px}.deliverables>div{padding-right:0}.faq{padding-top:70px;padding-bottom:80px}.faq-list details{padding:20px 0}.faq-list details p{margin-right:0}}
+
+/* Service scope and evidence-based trust sections */
+.review-detail{padding-top:112px;padding-bottom:110px;border-top:1px solid #d6d7d4}
+.review-grid,.experience-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:25px}
+.review-grid article{background:#eeeae7;padding:32px;min-width:0}
+.review-grid h3,.experience-grid h3{font-size:25px;line-height:1.25;margin:18px 0}
+.review-grid ul{padding-left:19px;color:#525b60;font-size:14px;line-height:1.85}
+.review-grid li{margin-bottom:8px}
+.review-cta{margin-top:28px;padding:26px 0;border-top:1px solid #c6c8c6;display:flex;justify-content:space-between;align-items:center;gap:25px}
+.review-cta strong{font-size:26px;font-family:Manrope,sans-serif;letter-spacing:-.05em}
+.review-cta p{font-size:13px;color:var(--muted);max-width:470px;margin:5px 0}
+.experience{padding-top:120px;padding-bottom:120px}
+.experience-grid article{border-top:1px solid #bfc1c1;padding-top:25px}
+.experience-grid article>span{font-size:11px;letter-spacing:.15em;font-weight:800;color:var(--berry)}
+.experience-grid p{font-size:15px;color:#5a656b;line-height:1.8}
+.experience-note{margin-top:38px;border:1px solid #d0d1cf;padding:25px 30px;display:flex;align-items:center;justify-content:space-between;gap:30px}
+.experience-note p{max-width:690px;color:#5e686e;font-size:14px}
+.experience-note a{white-space:nowrap;font-weight:800;font-size:13px;border-bottom:1px solid}
+@media(max-width:850px){.review-grid,.experience-grid{grid-template-columns:1fr;gap:15px}.review-grid article{padding:24px}.experience-grid article{padding:24px 0 10px}.experience-note{display:block}.experience-note a{display:inline-block;margin-top:10px}.review-cta{align-items:flex-start;flex-direction:column}}
+@media(max-width:560px){.review-detail,.experience{padding-top:70px;padding-bottom:70px}.review-cta .button{width:100%}.review-grid h3,.experience-grid h3{font-size:23px}.experience-note{padding:20px}.experience-note a{white-space:normal}}
