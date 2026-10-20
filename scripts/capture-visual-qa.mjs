@@ -32,6 +32,12 @@ try {
       horizontalOverflow: document.documentElement.scrollWidth > window.innerWidth + 1,
       headings: Array.from(document.querySelectorAll("h1")).map((h) => h.textContent?.trim()),
       mailtoLinks: document.querySelectorAll('a[href^="mailto:"]').length,
+      mainLandmarks: document.querySelectorAll("main").length,
+      skipTargetPresent: Boolean(document.querySelector("#main-content")),
+      brokenInternalAnchors: Array.from(document.querySelectorAll('a[href^="#"]'))
+        .map(a => a.getAttribute("href")).filter(href => href && href !== "#" && !document.getElementById(href.slice(1))),
+      emptyLinkNames: Array.from(document.querySelectorAll("a"))
+        .filter(a => !(a.textContent || "").trim() && !a.getAttribute("aria-label")).length,
     }));
     report.push({ profile: name, status: response?.status(), ...data, pageErrors: failures });
     await context.close();
@@ -55,7 +61,10 @@ try {
     console.log(`${item.profile}: HTTP ${item.status}, viewport ${item.viewportWidth}, document ${item.documentWidth}, overflow=${item.horizontalOverflow}, JS errors=${item.pageErrors.length}`);
   }
   console.log("Screenshots and report:", outDir);
-  if (report.some((item) => item.horizontalOverflow || item.pageErrors.length || item.status !== 200 || (item.profile.startsWith("/") && (!item.heading || item.homeHref !== "/")))) process.exitCode = 1;
+  if (report.some((item) => item.horizontalOverflow || item.pageErrors.length || item.status !== 200 ||
+    (item.profile.startsWith("/") && (!item.heading || item.homeHref !== "/")) ||
+    (!item.profile.startsWith("/") && (item.mainLandmarks !== 1 || !item.skipTargetPresent || item.brokenInternalAnchors.length > 0 || item.emptyLinkNames > 0))
+  )) process.exitCode = 1;
 } finally {
   await browser.close();
 }
