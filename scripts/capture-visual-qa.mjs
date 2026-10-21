@@ -55,6 +55,16 @@ try {
     const homeHref = await trustPage.locator('a[href="/"]').first().getAttribute("href");
     report.push({ profile: pathname, status: response?.status(), heading, homeHref, pageErrors: errors });
   }
+  for (const pathname of ["/demos/wellness/", "/demos/trades/"]) {
+    const errors = [];
+    trustPage.removeAllListeners("pageerror");
+    trustPage.on("pageerror", e => errors.push(e.message));
+    const response = await trustPage.goto(new URL(pathname, baseUrl).toString(), { waitUntil: "networkidle" });
+    const heading = await trustPage.locator("h1").first().textContent();
+    const backLink = await trustPage.locator('a[href="/#examples"]').count();
+    const disclaimer = await trustPage.locator(".demo-warning").textContent();
+    report.push({ profile: pathname, status: response?.status(), heading, demoBackLink: backLink > 0, demoDisclaimer: Boolean(disclaimer?.includes("FICTIONAL BUSINESS")), pageErrors: errors });
+  }
   await trustContext.close();
   await writeFile(path.join(outDir, "report.json"), JSON.stringify(report, null, 2));
   for (const item of report) {
@@ -62,7 +72,7 @@ try {
   }
   console.log("Screenshots and report:", outDir);
   if (report.some((item) => item.horizontalOverflow || item.pageErrors.length || item.status !== 200 ||
-    (item.profile.startsWith("/") && (!item.heading || item.homeHref !== "/")) ||
+    (item.profile.startsWith("/") && (!item.heading || (item.profile.startsWith("/demos/") ? (!item.demoBackLink || !item.demoDisclaimer) : item.homeHref !== "/"))) ||
     (!item.profile.startsWith("/") && (item.mainLandmarks !== 1 || !item.skipTargetPresent || item.brokenInternalAnchors.length > 0 || item.emptyLinkNames > 0))
   )) process.exitCode = 1;
 } finally {
