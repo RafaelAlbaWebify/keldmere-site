@@ -23,3 +23,10 @@ No imagery enters published Keldmere without a complete register row, correct vi
 Reference licence pages:
 - https://unsplash.com/license
 - https://www.pexels.com/license/
+
+## AI-generated visual candidates (not yet committed as binaries)
+Two small WebP studies were prepared on 2026-10-21 from an AI-generated concept composition:
+- `everwell-yoga-concept.webp` — 428×345, approximately 20 KiB; AI-generated wellness subject.
+- `fieldwork-architecture-concept.webp` — 377×338, approximately 22 KiB; AI-generated architecture subject.
+
+These are **fictional illustrations**, not photographic evidence of classes, clients, buildings or completed projects. They are low-resolution composition studies, not approved final production hero assets. The binary files are currently packaged separately for review; they have **not** been added to `public/images` and the website does **not** reference them. If adopted, upload them to `public/images`, maintain the AI-origin disclosure in the asset register, and verify the resulting GitHub Pages static export before merging.
