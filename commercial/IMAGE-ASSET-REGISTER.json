@@ -1,0 +1,5 @@
+{
+  "schema_version": 1,
+  "assets": [],
+  "notes": "Each image in public/images must have a matching registered path, source, type (ai_generated or licensed_photo), usage_basis and approved_for_demo."
+}
