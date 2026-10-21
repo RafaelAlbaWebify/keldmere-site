@@ -71,7 +71,8 @@ try {
         .filter(href => href && href !== "#" && !document.getElementById(href.slice(1))),
       emptyLinkNames: Array.from(document.querySelectorAll("a"))
         .filter(a => !(a.textContent || "").trim() && !a.getAttribute("aria-label")).length,
-      horizontalOverflow: document.documentElement.scrollWidth > window.innerWidth + 1
+      horizontalOverflow: document.documentElement.scrollWidth > window.innerWidth + 1,
+      brokenImages: Array.from(document.images).filter(img => !img.complete || img.naturalWidth === 0).map(img => img.getAttribute('src'))
     }));
     
     report.push({ profile: pathname, status: response?.status(), heading, demoBackLink: backLink > 0, demoDisclaimer: Boolean(disclaimer?.includes("FICTIONAL BUSINESS") || disclaimer?.includes("FICTIONAL BRAND")), ...integrity, pageErrors: errors });
@@ -103,7 +104,7 @@ try {
   }
   console.log("Screenshots and report:", outDir);
   if (report.some((item) => item.horizontalOverflow || item.pageErrors.length || item.status !== 200 ||
-    (item.profile.startsWith("/") && (!item.heading || (item.profile.startsWith("/demos/") ? (!item.demoBackLink || !item.demoDisclaimer || item.mainLandmarks !== 1 || !item.skipTargetPresent || item.brokenInternalAnchors.length > 0 || item.emptyLinkNames > 0) : item.homeHref !== "/"))) ||
+    (item.profile.startsWith("/") && (!item.heading || (item.profile.startsWith("/demos/") ? (!item.demoBackLink || !item.demoDisclaimer || item.mainLandmarks !== 1 || !item.skipTargetPresent || item.brokenInternalAnchors.length > 0 || item.emptyLinkNames > 0 || item.brokenImages.length > 0) : item.homeHref !== "/"))) ||
     (!item.profile.startsWith("/") && !item.profile.endsWith("-demo-mobile") && (item.mainLandmarks !== 1 || !item.skipTargetPresent || item.brokenInternalAnchors.length > 0 || item.emptyLinkNames > 0))
   )) process.exitCode = 1;
 } finally {
