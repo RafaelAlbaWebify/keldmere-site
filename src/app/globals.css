@@ -47,3 +47,8 @@
 .skip-link{position:fixed;left:16px;top:-80px;z-index:1000;background:#1e252b;color:#fff;padding:12px 16px;font-weight:700;border:2px solid #fff}
 .skip-link:focus{top:12px}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* Dual offering and international market positioning */
+.markets{border-top:1px solid #d0d0ce;padding-top:28px;padding-bottom:24px;display:grid;grid-template-columns:1fr 3fr;gap:25px;align-items:start}
+.markets .eyebrow{color:var(--berry);margin:8px 0}.markets>p:last-child{font-size:19px;max-width:920px;margin:0;line-height:1.65}.markets strong{font-weight:700}
+@media(max-width:720px){.markets{display:block;padding-top:26px;padding-bottom:0}.markets>p:last-child{font-size:16px}}
