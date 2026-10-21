@@ -1,4 +1,4 @@
-const inbox="webify.reception@gmail.com"; // TEMPORARY until branded mailbox is tested
+const inbox="hello@keldmere.com";
 const mail=(subject:string)=>`mailto:${inbox}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent("Hello Keldmere,\n\nCompany / team size:\nWhat we need help with:\nPreferred contact method:\n\nPlease do not include passwords or sensitive information.")}`;
 const faqs=[
  {q:"Do we need to change our Microsoft 365 licenses?",a:"Not necessarily. We start by reviewing your existing configuration and requirements. Any license changes are discussed separately before you approve them."},
