@@ -65,6 +65,13 @@ try {
     const disclaimer = await trustPage.locator(".demo-warning").textContent();
     report.push({ profile: pathname, status: response?.status(), heading, demoBackLink: backLink > 0, demoDisclaimer: Boolean(disclaimer?.includes("FICTIONAL BUSINESS")), pageErrors: errors });
   }
+  const demoShotContext = await browser.newContext({ viewport: { width: 1440, height: 900 }, deviceScaleFactor: 1 });
+  const demoShotPage = await demoShotContext.newPage();
+  for (const [name, pathname] of [["wellness-demo", "/demos/wellness/"], ["trades-demo", "/demos/trades/"]]) {
+    await demoShotPage.goto(new URL(pathname, baseUrl).toString(), { waitUntil: "networkidle" });
+    await demoShotPage.screenshot({path: path.join(outDir, name + ".png"), fullPage: true, animations: "disabled"});
+  }
+  await demoShotContext.close();
   await trustContext.close();
   await writeFile(path.join(outDir, "report.json"), JSON.stringify(report, null, 2));
   for (const item of report) {
