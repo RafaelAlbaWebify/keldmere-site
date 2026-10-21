@@ -62,8 +62,8 @@ try {
     const response = await trustPage.goto(new URL(pathname, baseUrl).toString(), { waitUntil: "networkidle" });
     const heading = await trustPage.locator("h1").first().textContent();
     const backLink = await trustPage.locator('a[href="/#examples"]').count();
-    const disclaimer = await trustPage.locator(".demo-warning").textContent();
-    report.push({ profile: pathname, status: response?.status(), heading, demoBackLink: backLink > 0, demoDisclaimer: Boolean(disclaimer?.includes("FICTIONAL BUSINESS")), pageErrors: errors });
+    const disclaimer = await trustPage.locator(".demo-warning, .ew-disclosure").first().textContent();
+    report.push({ profile: pathname, status: response?.status(), heading, demoBackLink: backLink > 0, demoDisclaimer: Boolean(disclaimer?.includes("FICTIONAL BUSINESS") || disclaimer?.includes("FICTIONAL BRAND")), pageErrors: errors });
   }
   const demoShotContext = await browser.newContext({ viewport: { width: 1440, height: 900 }, deviceScaleFactor: 1 });
   const demoShotPage = await demoShotContext.newPage();
