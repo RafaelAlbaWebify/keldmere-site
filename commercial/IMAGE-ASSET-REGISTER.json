@@ -1,5 +1,20 @@
 {
   "schema_version": 1,
-  "assets": [],
+  "assets": [
+    {
+      "path": "public/images/everwell-ai-study.svg",
+      "source": "ChatGPT AI-generated portfolio concept, 2026-10-21",
+      "type": "ai_generated",
+      "usage_basis": "Original fictional design-study artwork; no real studio or client depicted",
+      "approved_for_demo": true
+    },
+    {
+      "path": "public/images/fieldwork-ai-study.svg",
+      "source": "ChatGPT AI-generated portfolio concept, 2026-10-21",
+      "type": "ai_generated",
+      "usage_basis": "Original fictional architectural illustration; not a built project",
+      "approved_for_demo": true
+    }
+  ],
   "notes": "Each image in public/images must have a matching registered path, source, type (ai_generated or licensed_photo), usage_basis and approved_for_demo."
 }
