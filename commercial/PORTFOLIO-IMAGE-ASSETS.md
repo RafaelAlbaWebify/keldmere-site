@@ -2,6 +2,13 @@
 
 Keldmere demos use fictional businesses and concept-only architectural visuals. Photos must never imply actual client work or completed projects.
 
+## AI-generated concept assets
+- AI-generated visuals are acceptable for *fictional design studies*, not as evidence of completed construction, existing premises, customers or results.
+- Record generation date, model/tool, prompt intent, filename, and any known editing steps in the same register.
+- Use clear page-level labels such as **fictional concept**. Do not include fake testimonials, real-company logos, invented project results or misleading photos of people.
+- Review generated architectural details and human anatomy at the actual crop sizes before approval.
+- Store final optimized assets locally in `public/images/` before referencing them in application code. Chat attachments are not production asset URLs.
+
 ## Asset sourcing
 - Prefer downloadable Pexels or free Unsplash images with a source page for each exact image.
 - Confirm the individual image is not premium/restricted and is permitted for commercial use.
@@ -13,7 +20,7 @@ Keldmere demos use fictional businesses and concept-only architectural visuals. 
 - Provide meaningful alt text for informative photos; empty alt for purely decorative photos. Always test mobile crops at 390px and desktop at 1440px.
 
 ## Image register
-| Filename | Original URL | Creator | Licence | Date verified | Intended section |
+| Filename | Source URL or AI generation reference | Creator / tool | Rights / usage basis | Date verified | Intended section |
 | --- | --- | --- | --- | --- | --- |
 | *(awaiting selected and downloaded image assets)* | | | | | |
 
