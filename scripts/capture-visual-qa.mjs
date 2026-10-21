@@ -72,6 +72,19 @@ try {
     await demoShotPage.screenshot({path: path.join(outDir, name + ".png"), fullPage: true, animations: "disabled"});
   }
   await demoShotContext.close();
+  const mobileDemoContext = await browser.newContext({viewport: {width: 390,height: 844},deviceScaleFactor: 1,isMobile: true,hasTouch: true});
+  const mobileDemoPage = await mobileDemoContext.newPage();
+  for (const [name, pathname] of [["wellness-demo-mobile", "/demos/wellness/"], ["trades-demo-mobile", "/demos/trades/"]]) {
+    const errors = [];
+    mobileDemoPage.removeAllListeners("pageerror");
+    mobileDemoPage.on("pageerror", e => errors.push(e.message));
+    await mobileDemoPage.goto(new URL(pathname, baseUrl).toString(), {waitUntil: "networkidle"});
+    await mobileDemoPage.screenshot({path:path.join(outDir, name + ".png"), fullPage:true, animations:"disabled"});
+    const measure = await mobileDemoPage.evaluate(() => ({viewportWidth:innerWidth, documentWidth:document.documentElement.scrollWidth}));
+    report.push({profile:name,status:200,horizontalOverflow:measure.documentWidth > measure.viewportWidth + 1,pageErrors:errors});
+  }
+  await mobileDemoContext.close();
+
   await trustContext.close();
   await writeFile(path.join(outDir, "report.json"), JSON.stringify(report, null, 2));
   for (const item of report) {
