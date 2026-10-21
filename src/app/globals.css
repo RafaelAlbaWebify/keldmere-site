@@ -121,3 +121,19 @@
 @media(max-width:960px){.premium-sites{grid-template-columns:1fr 1fr}.premium-site:last-child{grid-column:1/-1}.premium-site{min-height:395px}}
 @media(max-width:600px){.premium-sites{grid-template-columns:1fr;margin-top:36px}.premium-site:last-child{grid-column:auto}.premium-site{min-height:350px}.premium-site-inner{min-height:340px}.premium-site-inner strong{font-size:45px}.gallery-services{grid-template-columns:1fr;gap:16px}.gallery-services>div{border-bottom:1px solid #d5d7d3;padding:0 0 18px}}
 @media(prefers-reduced-motion:reduce){.premium-site{transition:none}.premium-site:hover{transform:none}}
+
+/* Static GitHub Pages showreel: no JavaScript, video CDN, or heavyweight player */
+.premium-showreel{position:relative;display:block;aspect-ratio:16/8.5;min-height:370px;overflow:hidden;background:#202830;margin-top:48px}
+.premium-showreel>.premium-site{position:absolute;inset:0;min-height:0;opacity:0;pointer-events:none;animation:keldmere-reel 15s ease-in-out infinite;transform:none}
+.premium-showreel>.premium-site:nth-child(1){animation-delay:0s}
+.premium-showreel>.premium-site:nth-child(2){animation-delay:5s}
+.premium-showreel>.premium-site:nth-child(3){animation-delay:10s;pointer-events:auto}
+.premium-showreel>.premium-site .premium-site-inner{padding:6% 9%}
+.premium-showreel>.premium-site .premium-site-inner strong{font-size:clamp(48px,6vw,92px);max-width:820px}
+.premium-showreel>.premium-site .premium-browser{padding:10px 25px}
+.premium-showreel>.premium-site:hover{transform:none;box-shadow:none}
+.showreel-help{font-size:13px;color:#697178;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;margin:13px 0 0}
+.showreel-help a{text-decoration:underline;text-underline-offset:4px}
+@keyframes keldmere-reel{0%,2%{opacity:0}6%,28%{opacity:1}33.33%,100%{opacity:0}}
+@media(max-width:750px){.premium-showreel{min-height:410px;aspect-ratio:auto}.premium-showreel>.premium-site{grid-column:auto}.premium-showreel>.premium-site .premium-site-inner strong{font-size:clamp(42px,10vw,65px)}}
+@media(prefers-reduced-motion:reduce){.premium-showreel{display:grid;grid-template-columns:1fr;aspect-ratio:auto;overflow:visible;background:none;gap:12px}.premium-showreel>.premium-site{position:relative;opacity:1;animation:none;pointer-events:auto;min-height:300px}.premium-showreel>.premium-site .premium-site-inner strong{font-size:43px}}
