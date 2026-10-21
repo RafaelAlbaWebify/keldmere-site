@@ -17,6 +17,8 @@ jobs:
           node-version: 22
       - name: Install website dependencies
         run: npm install --no-audit --no-fund
+      - name: Audit image asset budget
+        run: node scripts/audit-image-assets.mjs
       - name: Build static export
         run: npm run build
       - name: Verify exported page
