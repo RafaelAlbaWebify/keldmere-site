@@ -63,7 +63,18 @@ try {
     const heading = await trustPage.locator("h1").first().textContent();
     const backLink = await trustPage.locator('a[href="/#examples"]').count();
     const disclaimer = await trustPage.locator(".demo-warning, .ew-disclosure, .fw-disclosure").first().textContent();
-    report.push({ profile: pathname, status: response?.status(), heading, demoBackLink: backLink > 0, demoDisclaimer: Boolean(disclaimer?.includes("FICTIONAL BUSINESS") || disclaimer?.includes("FICTIONAL BRAND")), pageErrors: errors });
+    const integrity = await trustPage.evaluate(() => ({
+      mainLandmarks: document.querySelectorAll("main").length,
+      skipTargetPresent: Boolean(document.getElementById("main-content")),
+      brokenInternalAnchors: Array.from(document.querySelectorAll('a[href^="#"]'))
+        .map(a => a.getAttribute("href"))
+        .filter(href => href && href !== "#" && !document.getElementById(href.slice(1))),
+      emptyLinkNames: Array.from(document.querySelectorAll("a"))
+        .filter(a => !(a.textContent || "").trim() && !a.getAttribute("aria-label")).length,
+      horizontalOverflow: document.documentElement.scrollWidth > window.innerWidth + 1
+    }));
+    
+    report.push({ profile: pathname, status: response?.status(), heading, demoBackLink: backLink > 0, demoDisclaimer: Boolean(disclaimer?.includes("FICTIONAL BUSINESS") || disclaimer?.includes("FICTIONAL BRAND")), ...integrity, pageErrors: errors });
   }
   const demoShotContext = await browser.newContext({ viewport: { width: 1440, height: 900 }, deviceScaleFactor: 1 });
   const demoShotPage = await demoShotContext.newPage();
@@ -92,7 +103,7 @@ try {
   }
   console.log("Screenshots and report:", outDir);
   if (report.some((item) => item.horizontalOverflow || item.pageErrors.length || item.status !== 200 ||
-    (item.profile.startsWith("/") && (!item.heading || (item.profile.startsWith("/demos/") ? (!item.demoBackLink || !item.demoDisclaimer) : item.homeHref !== "/"))) ||
+    (item.profile.startsWith("/") && (!item.heading || (item.profile.startsWith("/demos/") ? (!item.demoBackLink || !item.demoDisclaimer || item.mainLandmarks !== 1 || !item.skipTargetPresent || item.brokenInternalAnchors.length > 0 || item.emptyLinkNames > 0) : item.homeHref !== "/"))) ||
     (!item.profile.startsWith("/") && !item.profile.endsWith("-demo-mobile") && (item.mainLandmarks !== 1 || !item.skipTargetPresent || item.brokenInternalAnchors.length > 0 || item.emptyLinkNames > 0))
   )) process.exitCode = 1;
 } finally {
