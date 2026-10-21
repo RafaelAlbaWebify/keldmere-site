@@ -198,3 +198,47 @@
 @media(max-width:1000px){.k-premium-layout{grid-template-columns:1fr}.k-premium-intro h1{max-width:750px}.k-hero-feature{max-width:800px;width:100%;margin:auto}.k-feature-art{height:500px}}
 @media(max-width:640px){.k-premium-hero{padding-top:33px;padding-bottom:60px}.k-premium-intro h1{font-size:clamp(55px,12vw,80px);margin:27px 0}.k-hero-copy{font-size:16px}.k-hero-footnote{margin-top:30px}.k-feature-art{height:390px}.k-hero-feature{padding:9px}.k-feature-header,.k-feature-footer{font-size:7px}.k-mini-legal{width:85%;height:200px;left:9px;top:11px;padding:13px}.k-mini-legal-copy{margin-top:18px}.k-mini-legal-copy strong{font-size:23px}.k-mini-dental{width:74%;height:215px;top:130px;right:5px;padding:11px}.k-mini-dental-content{margin-top:13px}.k-mini-dental-content strong{font-size:21px}.k-mini-dental-circle{width:100px;height:100px}.k-mini-architecture{width:59%;height:171px;bottom:7px;left:5px;padding:10px}.k-mini-architecture-block{top:39px;height:105px}.k-mini-architecture-copy strong{font-size:20px}.k-work-heading{display:block}.k-work-item{grid-template-columns:1fr;gap:10px}.k-work-item h3{font-size:26px}.k-work-item>a,.k-work-type{justify-self:start;text-align:left}}
 @media(prefers-reduced-motion:reduce){.k-hero-feature *{animation:none!important}}
+
+/* Integrated three-sector cinematic portfolio: independent full-page layouts */
+.k-reel{isolation:isolate;background:#e8e2d6}
+.k-reel-scene{position:absolute;inset:0;overflow:hidden;opacity:0;animation:kSceneCycle 18s infinite;will-change:opacity}
+.k-reel-scene:nth-child(1){animation-delay:0s}
+.k-reel-scene:nth-child(2){animation-delay:6s}
+.k-reel-scene:nth-child(3){animation-delay:12s}
+@keyframes kSceneCycle{0%,3%{opacity:0}6%,28%{opacity:1}33%,100%{opacity:0}}
+.k-reel-scene h3{letter-spacing:-.055em;margin:0}.k-reel-scene p{margin:0}
+.k-reel-legal{background:#e9e3d5;color:#2d3c32}
+.k-reel-legal-nav,.k-reel-dental-nav,.k-reel-architecture-nav{position:absolute;z-index:3;left:0;right:0;top:0;height:71px;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:0 6%}
+.k-reel-legal-nav b{font:700 18px Georgia,serif;letter-spacing:-.06em}.k-reel-legal-nav b span{font-weight:400;font-style:italic}
+.k-reel-legal-nav small,.k-reel-dental-nav small,.k-reel-architecture-nav small{font-size:9px;letter-spacing:.09em}
+.k-reel-legal-nav i{font:700 9px Arial,sans-serif;border-bottom:1px solid;padding-bottom:5px}
+.k-reel-legal-content{position:absolute;top:25%;left:7%;width:65%;z-index:2}
+.k-reel-kicker,.k-reel-dental-copy>span,.k-reel-architecture-copy>span{font:800 9px Arial,sans-serif;letter-spacing:.16em}
+.k-reel-legal h3{font:400 clamp(34px,4.4vw,65px)/1.02 Georgia,serif;margin:25px 0 20px}
+.k-reel-legal h3 em{font-weight:400;font-style:italic;color:#6d6e55}
+.k-reel-legal-content p{font-size:12px;max-width:240px;line-height:1.6}
+.k-reel-action{display:inline-block;background:#2d4037;color:#fff;font-size:9px;padding:12px 18px;margin-top:26px;letter-spacing:.06em}
+.k-reel-portrait{position:absolute;top:18%;right:0;width:33%;height:82%;background:linear-gradient(135deg,#d3c7b6,#9d917f)}
+.k-reel-portrait-arch{position:absolute;left:10%;right:10%;top:5%;bottom:0;border-radius:48% 48% 0 0;background:#667466;overflow:hidden}
+.k-reel-portrait-arch:before{content:"";position:absolute;top:12%;left:26%;width:48%;height:35%;border-radius:50%;background:#b88d78}
+.k-reel-portrait-arch span{position:absolute;bottom:-7%;left:3%;height:64%;width:94%;border-radius:44% 44% 0 0;background:#263a36}
+.k-reel-bottom{position:absolute;bottom:22px;left:7%;font-size:8px;letter-spacing:.14em}
+.k-reel-dental{background:#f7f5e9;color:#286471}
+.k-reel-dental-nav{background:#f7f5e9}.k-reel-dental-nav strong{font:800 25px Arial,sans-serif;letter-spacing:-.085em}.k-reel-dental-nav strong span{color:#e0a14c}.k-reel-dental-nav b{background:#2c7a84;color:#fff;font-size:9px;padding:11px}
+.k-reel-dental-copy{position:absolute;top:25%;left:7%;width:62%;z-index:2}
+.k-reel-dental h3{font:800 clamp(34px,4.2vw,61px)/1.03 Arial,sans-serif;margin:22px 0 16px}.k-reel-dental h3 em{font:italic 400 1.02em Georgia,serif;color:#d79252}
+.k-reel-dental-copy p{font-size:12px;max-width:225px}.k-reel-dental-copy>b{display:inline-block;background:#2d7a82;color:white;font-size:9px;padding:14px;margin-top:21px}
+.k-reel-dental-art{position:absolute;right:-4%;bottom:8%;height:65%;width:45%;border-radius:180px 180px 0 0;background:#acd3c8;overflow:hidden}
+.k-reel-sun{position:absolute;top:8%;right:8%;width:62%;aspect-ratio:1;border-radius:50%;background:#f5d993}
+.k-reel-face{position:absolute;bottom:-10%;right:18%;width:60%;height:88%;border-radius:47% 47% 0 0;background:linear-gradient(180deg,#b98968 0 48%,#f5efe2 49% 100%)}
+.k-reel-dental-pills{display:flex;gap:7px;position:absolute;bottom:19px;left:7%;z-index:3}.k-reel-dental-pills span{border:1px solid #a6c0b5;padding:7px;font-size:7px;font-weight:700}
+.k-reel-architecture{background:#2b3733;color:#f5f1e8}
+.k-reel-architecture-nav{background:#26322eaa}.k-reel-architecture-nav strong{font:600 25px Georgia,serif;letter-spacing:.035em}
+.k-reel-building{position:absolute;inset:70px 0 0;background:linear-gradient(155deg,#788b7b,#4c5d52 50%,#172821)}
+.k-reel-roof{position:absolute;right:-8%;top:18%;width:85%;height:70%;transform:skew(-9deg);background:linear-gradient(135deg,#b8b2a0 0 25%,#6d7567 26% 34%,#c0b5a0 35% 60%,#303e38 61%)}
+.k-reel-glass{position:absolute;right:8%;bottom:3%;width:48%;height:37%;background:repeating-linear-gradient(90deg,#182c2aee 0 24%,#80958a 25% 26%);border:9px solid #a9a99b}
+.k-reel-architecture-copy{position:absolute;z-index:2;left:8%;bottom:21%;text-shadow:0 2px 14px #0007}
+.k-reel-architecture h3{font:400 clamp(42px,5.3vw,74px)/1 Georgia,serif;margin-top:20px}.k-reel-architecture h3 em{color:#f2e5ce;font-style:italic}
+.k-reel-architecture-footer{position:absolute;z-index:2;left:8%;right:8%;bottom:25px;display:flex;justify-content:space-between;font-size:8px;letter-spacing:.13em}
+@media(max-width:650px){.k-reel-legal-nav,.k-reel-dental-nav,.k-reel-architecture-nav{height:52px;padding:0 5%}.k-reel-scene nav small,.k-reel-legal-nav small,.k-reel-dental-nav small,.k-reel-architecture-nav small{display:none}.k-reel-legal h3,.k-reel-dental h3{font-size:36px}.k-reel-legal-content,.k-reel-dental-copy{top:22%;width:80%}.k-reel-legal-content p,.k-reel-dental-copy p{max-width:185px}.k-reel-portrait{width:38%;opacity:.85}.k-reel-dental-art{width:37%;height:53%;bottom:11%}.k-reel-architecture h3{font-size:45px}.k-reel-dental-pills span{font-size:6px}}
+@media(prefers-reduced-motion:reduce){.k-reel-scene{animation:none!important;opacity:0}.k-reel-scene:first-child{opacity:1}}
