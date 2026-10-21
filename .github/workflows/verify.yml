@@ -25,14 +25,14 @@ jobs:
         run: |
           npm install --no-save --no-audit --no-fund playwright@1.55.1
           npx playwright install --with-deps chromium
-      - name: Start site and wait for response
+      - name: Serve exported static site and wait for response
         run: |
-          npm run dev -- -p 3000 > /tmp/keldmere-next.log 2>&1 &
+          python3 -m http.server 3000 --directory out > /tmp/keldmere-static.log 2>&1 &
           for i in $(seq 1 40); do
             if curl --fail --silent http://127.0.0.1:3000/ > /dev/null; then exit 0; fi
             sleep 2
           done
-          cat /tmp/keldmere-next.log
+          cat /tmp/keldmere-static.log
           exit 1
       - name: Capture 4 viewports and test overflow/errors
         run: node scripts/capture-visual-qa.mjs
