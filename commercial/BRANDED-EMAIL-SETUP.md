@@ -20,3 +20,11 @@ hello@keldmere.com (customer enquiries). Optionally create a distinct billing@ke
 6. Document provider, renewal cost, administrator recovery, DNS baseline and failure rollback.
 
 **Do not invent provider DNS values, assume a subscription, or publish untested @keldmere.com addresses.**
+
+## 21 October 2026 — tested first-stage setup
+- Namecheap Email Forwarding: hello@keldmere.com -> ralbas.int@gmail.com, inbound confirmed.
+- Brevo: keldmere.com domain authenticated; DKIM and DMARC show configured; sender hello@keldmere.com verified.
+- Gmail "Send mail as" configured using Brevo SMTP; external email received displaying hello@keldmere.com (user screenshot).
+- No paid subscription. Pending optional verification: inspect an actual delivered message's original headers for SPF/DKIM/DMARC.
+- Gmail third-party send-as availability may change; retain an alternate mail-client plan.
+- Keep SMTP credentials out of repository and support transcripts.
