@@ -52,3 +52,25 @@
 .markets{border-top:1px solid #d0d0ce;padding-top:28px;padding-bottom:24px;display:grid;grid-template-columns:1fr 3fr;gap:25px;align-items:start}
 .markets .eyebrow{color:var(--berry);margin:8px 0}.markets>p:last-child{font-size:19px;max-width:920px;margin:0;line-height:1.65}.markets strong{font-weight:700}
 @media(max-width:720px){.markets{display:block;padding-top:26px;padding-bottom:0}.markets>p:last-child{font-size:16px}}
+
+/* Website purchase, maintenance and managed subscription comparison */
+.plan-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:36px 0 22px}
+.plan-card{background:#fff;border:1px solid #dad8d4;border-radius:4px;padding:27px 25px;display:flex;flex-direction:column;min-width:0}
+.plan-card:nth-child(2){border-color:var(--berry)}
+.plan-card .eyebrow{color:var(--berry);font-size:10px}
+.plan-card h3{font-size:clamp(25px,2.5vw,34px);margin:12px 0 16px;line-height:1.2}
+.plan-price{font:800 clamp(24px,2.8vw,35px)/1.2 Manrope,sans-serif;letter-spacing:-.05em}
+.plan-price span{font-size:15px;letter-spacing:0}
+.plan-card>p:not(.eyebrow){font-size:14px;color:#596269;line-height:1.65;min-height:92px}
+.plan-card ul{padding-left:18px;font-size:13px;line-height:1.7;flex:1;color:#424a50}
+.plan-card li{margin-bottom:7px}
+.plan-card>a{font-size:13px;font-weight:800;border-top:1px solid #dedcda;padding-top:16px;margin-top:12px}
+.plan-clarity{background:#ebe9e5;padding:23px 28px;margin:0 0 25px}
+.plan-clarity strong{font-size:15px}
+.plan-clarity p{font-size:13px;line-height:1.7;color:#4e5860;margin:9px 0 0}
+.it-detail{padding-top:72px;padding-bottom:85px}
+.it-compact{display:flex;justify-content:space-between;gap:32px;align-items:center;border-top:1px solid #bfc1c1;border-bottom:1px solid #bfc1c1;padding:26px 0}
+.it-compact>div{max-width:760px}
+.it-compact p{color:#596269;font-size:14px}
+.it-compact>a{font-weight:800;font-size:13px;white-space:nowrap}
+@media(max-width:900px){.plan-grid{grid-template-columns:1fr}.plan-card>p:not(.eyebrow){min-height:0}.it-compact{align-items:flex-start;flex-direction:column}.it-compact>a{white-space:normal}}
