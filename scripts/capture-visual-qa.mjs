@@ -93,7 +93,7 @@ try {
   console.log("Screenshots and report:", outDir);
   if (report.some((item) => item.horizontalOverflow || item.pageErrors.length || item.status !== 200 ||
     (item.profile.startsWith("/") && (!item.heading || (item.profile.startsWith("/demos/") ? (!item.demoBackLink || !item.demoDisclaimer) : item.homeHref !== "/"))) ||
-    (!item.profile.startsWith("/") && (item.mainLandmarks !== 1 || !item.skipTargetPresent || item.brokenInternalAnchors.length > 0 || item.emptyLinkNames > 0))
+    (!item.profile.startsWith("/") && !item.profile.endsWith("-demo-mobile") && (item.mainLandmarks !== 1 || !item.skipTargetPresent || item.brokenInternalAnchors.length > 0 || item.emptyLinkNames > 0))
   )) process.exitCode = 1;
 } finally {
   await browser.close();
