@@ -256,3 +256,6 @@
 @keyframes kPremiumCycle{0%,3%{opacity:0}6%,29%{opacity:1}33%,100%{opacity:0}}
 @media(max-width:650px){.k-premium-reel{height:270px}.k-premium-frame figcaption{padding:22px 12px 10px}.k-premium-frame figcaption span{font-size:7px}.k-premium-frame figcaption strong{font-size:12px}}
 @media(prefers-reduced-motion:reduce){.k-premium-frame{animation:none!important;opacity:0}.k-premium-frame:first-child{opacity:1}}
+
+/* A usable first still when browser animations are unavailable or suspended. */
+.k-premium-frame:first-child{opacity:1}
