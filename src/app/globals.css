@@ -266,3 +266,18 @@
 .k-premium-open{position:absolute;z-index:5;bottom:12px;right:22px;color:#fff;background:#243a32ed;border:1px solid #ffffff9c;padding:7px 11px;font-size:11px;font-weight:700;letter-spacing:.03em}
 .k-premium-open:hover,.k-premium-open:focus-visible{background:#395745;text-decoration:underline}
 @media(max-width:650px){.k-premium-frame figcaption{padding-bottom:35px}.k-premium-open{right:11px;bottom:8px;font-size:9px;padding:6px}}
+
+/* Visual QA adjustment 2026-10-22: give the real portfolio artwork priority. */
+@media(min-width:1001px){
+.k-premium-layout{grid-template-columns:minmax(0,.78fr) minmax(0,1.22fr);gap:3.5%}
+.k-premium-intro h1{font-size:clamp(55px,5.5vw,86px)}
+.k-feature-art{height:590px}
+.k-premium-frame img{object-fit:contain}
+}
+@media(max-width:640px){
+.k-premium-hero{padding-top:12px}
+.k-premium-intro{padding:14px 0 26px}
+.k-premium-intro h1{font-size:clamp(46px,10vw,64px);margin:19px 0 22px}
+.k-hero-actions{margin-top:23px}
+.k-hero-footnote{margin-top:18px}
+}
