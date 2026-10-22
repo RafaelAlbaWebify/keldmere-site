@@ -25,7 +25,7 @@ try {
     const response = await page.goto(baseUrl, { waitUntil: "networkidle", timeout: 30000 });
     await page.evaluate(() => document.fonts.ready);
     await page.screenshot({ path: path.join(outDir, name + ".png"), fullPage: true, animations: "disabled" });
-    const data = await page.evaluate(() => ({
+    const data = await page.evaluate(async () => ({
       title: document.title,
       viewportWidth: window.innerWidth,
       documentWidth: document.documentElement.scrollWidth,
@@ -33,6 +33,8 @@ try {
       headings: Array.from(document.querySelectorAll("h1")).map((h) => h.textContent?.trim()),
       mailtoLinks: document.querySelectorAll('a[href^="mailto:"]').length,
       misleadingPortfolioLinks: Array.from(document.querySelectorAll("a.premium-site")).filter(a => !a.getAttribute("href")?.startsWith("/demos/")).length,
+      premiumAssetsPresent: Array.from(document.querySelectorAll('.k-premium-frame img')).length === 3,
+      premiumAssetsHealthy: (await Promise.all(Array.from(document.querySelectorAll('.k-premium-frame img')).map(async (img) => {try {const response = await fetch(img.getAttribute('src')); return response.ok && (response.headers.get('content-type') || '').startsWith('image/')} catch {return false}}))).every(Boolean),
       mainLandmarks: document.querySelectorAll("main").length,
       skipTargetPresent: Boolean(document.querySelector("#main-content")),
       brokenInternalAnchors: Array.from(document.querySelectorAll('a[href^="#"]'))
@@ -106,7 +108,7 @@ try {
   console.log("Screenshots and report:", outDir);
   if (report.some((item) => item.horizontalOverflow || item.pageErrors.length || item.status !== 200 ||
     (item.profile.startsWith("/") && (!item.heading || (item.profile.startsWith("/demos/") ? (!item.demoBackLink || !item.demoDisclaimer || item.mainLandmarks !== 1 || !item.skipTargetPresent || item.brokenInternalAnchors.length > 0 || item.emptyLinkNames > 0 || item.brokenImages.length > 0) : item.homeHref !== "/"))) ||
-    (!item.profile.startsWith("/") && !item.profile.endsWith("-demo-mobile") && (item.mainLandmarks !== 1 || !item.skipTargetPresent || item.brokenInternalAnchors.length > 0 || item.emptyLinkNames > 0 || item.misleadingPortfolioLinks > 0))
+    (!item.profile.startsWith("/") && !item.profile.endsWith("-demo-mobile") && (item.mainLandmarks !== 1 || !item.skipTargetPresent || item.brokenInternalAnchors.length > 0 || item.emptyLinkNames > 0 || item.misleadingPortfolioLinks > 0 || !item.premiumAssetsPresent || !item.premiumAssetsHealthy))
   )) process.exitCode = 1;
 } finally {
   await browser.close();
