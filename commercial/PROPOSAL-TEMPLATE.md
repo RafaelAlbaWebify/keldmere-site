@@ -1,41 +1,46 @@
-# Keldmere Technology — Project proposal template
+# Keldmere — commercial proposal template (DRAFT)
 
-**DRAFT, not for public circulation without review.**
+Do not issue to customers until legal entity particulars, insurance position, service terms, privacy handling and appropriate tax wording have been verified.
 
-**Client:** [Legal client name]  
-**Service provider:** Webify Limited (Irish registered company; confirm current legal name and mandatory details)  
-**Project:** [Service name]  
-**Proposal reference / date:** [ID / date]  
-**Validity:** [Until date]
+**Client legal name:** [ ]  
+**Customer contact / authority:** [ ]  
+**Service provider:** Webify Limited — [registered number and registered address to verify]  
+**Commercial brand:** Keldmere — [business-name status to verify]  
+**Proposal ID / version / issue and expiry dates:** [ ]  
+**Offer:** [Website project / redesign / care / managed website / Microsoft 365]
 
-## 1. What we understood
-[Short customer problem statement; ask client to confirm.]
+## 1. Business objective
+[Customer requirement, target audience, measurable acceptance condition. Do not promise rankings or sales.]
 
-## 2. Objectives and scope
-[Systems, tenant(s), user/account count, endpoints, allowed methods and environments.]
+## 2. Agreed scope
+[Pages, content and design inputs, responsive requirements, CMS/static stack, integrations, email/contact route, domain and hosting responsibilities, required accessibility checks. For M365: tenants, users, licensing and allowed reviews/changes.]
 
-## 3. Deliverables
-[Exactly what the customer receives; format, acceptance criteria, number of feedback rounds.]
+## 3. Deliverables and review rounds
+[Exact pages/files, deployment and handover procedure, number of feedback/revision cycles, testing evidence and customer acceptance criteria.]
 
-## 4. Dependencies and customer responsibilities
-[Authorisation, access, internal contact, security approvals, relevant backups and licensing.]
+## 4. Customer inputs and dependencies
+[Brand assets and permissions, copy, images/licences, authorised contact, approvals, DNS/hosting control, schedule dependencies.]
 
-## 5. Exclusions
-[Explicitly list out-of-scope activities including remediation when review-only.]
+## 5. Exclusions and change requests
+[Explicitly list SEO campaigns, paid ads, copywriting, branding, subscriptions, premium assets, integrations, plug-ins, additional pages and security monitoring unless quoted. Explain additional-work approval.]
 
-## 6. Price and invoicing
-[EUR fixed price or time & materials; VAT treatment after accountant review; payment schedule; expenses; change requests.]
+## 6. Ownership, hosting and portability
+[Domain registrant; who owns source/design/assets; source delivery and licences; hosting provider and cost; backup responsibilities; transfer/migration plan.]
 
-## 7. Timing
-[Proposed start, target duration, dependencies and no unapproved SLA.]
+## 7. Pricing, taxes and payment
+[Approved currency, price, applicable VAT/taxes based on professional review, deposit, milestones, invoices, external costs, out-of-scope hourly/change rate.]
 
-## 8. Data handling and security
-[Minimum privileges, no secrets over email, approved evidence transfer, confidentiality, retention; review need for DPA.]
+## 8. Ongoing services — where applicable
+[Care plan and cadence, edit minutes, exclusions, backups/restore, communication windows, renewal, non-payment, cancellation and exit costs.]
+[For managed websites: agreed minimum term, committed total, transfer/termination conditions.]
 
-## 9. Support and handover
-[Communication channel, final report, verification, exclusions after completion.]
+## 9. Delivery and validation
+[Start subject to prerequisites, target checkpoints, responsive/device validation, acceptance and post-launch fault process. No unsupported SLA.]
 
-## 10. Client approval
-[Name, role, date, agreement/signature according to contract process.]
+## 10. Privacy and secure access
+[Lawful handling of any client data, relevant processors/subprocessors, approved permissions, retention and deletion, confidentiality / DPA if needed. Never request passwords in an email.]
 
-**Do not send before validating company particulars, applicable terms, privacy documentation and insurance position.**
+## 11. Acceptance
+[Client authorised signatory, date, quote version and agreed terms.]
+
+**Mandatory gate:** signed-off scope and terms before production access, invoicing or commencement. This template is not legal advice.
