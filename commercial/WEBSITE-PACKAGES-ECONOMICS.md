@@ -31,3 +31,25 @@
 6. Validate jurisdiction, VAT/indirect tax and customer contract wording with qualified advisers before approving public prices.
 
 **Launch decision:** pricing is experimental and website remains a draft. Do not publish or start billing merely because the technical build passes.
+
+## Cost and feasibility gate — evidence required before price approval (22 Oct 2026)
+
+No actual completed Keldmere website delivery times or recurring support costs are documented here. The following is a **measurement protocol**, not a margin estimate.
+
+For each pilot delivery, record:
+| Field | Required evidence |
+| --- | --- |
+| Service / agreed scope | Signed customer scope or documented internal pilot brief |
+| Design and build hours | Start/end worklog by activity; include revisions and meetings |
+| Fixed and variable costs | Paid receipts for hosting, domain, imagery, software, email, payment fees and subcontracting |
+| Post-launch care | Actual customer communication, maintenance, edits and incident hours |
+| Net receipts and taxes | Paid invoice and accountant-approved tax classification |
+| Change requests | Hours spent, change authority and whether invoiced |
+
+**Calculation:** effective revenue per delivery hour = (contract value − directly attributable third-party costs) / actual total hours. This is *not* profit and excludes taxes and allocated fixed overhead until those have been measured and assigned.
+
+For a proposed US$599 starter website, gross hourly revenue *before any costs* would be US$49.92 at 12 hours or US$29.95 at 20 hours; these are hypothetical scenarios already documented above, not measured performance. If either is commercially unacceptable, change the package price or its precise scope after evidence and approval.
+
+Do not describe a US$599 three-page starter as equivalent to the fully bespoke premium visual treatments in Keldmere's gallery; those are design samples and may require a different quote.
+
+**Decision gate:** no public pricing approval until at least one representative build or documented internal pilot has a complete hours-and-cost record, along with applicable contract/tax review. Do not fabricate customer pilots or income.
