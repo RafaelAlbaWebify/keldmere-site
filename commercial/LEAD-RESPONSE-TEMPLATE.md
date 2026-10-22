@@ -1,31 +1,28 @@
-# Lead handling — minimal manual workflow
+# Keldmere — manual lead response (DRAFT)
 
-## Incoming enquiry
-Record only company name, business contact, requested service, date, consent/communication basis and next action in an appropriately protected business workspace. Do not create a public leads database or store passwords.
-
-## Suggested acknowledgement
-Subject: Re: Your Keldmere enquiry
+**Subject:** Re: Your Keldmere enquiry
 
 Hello [First name],
 
-Thank you for contacting Keldmere Technology. I understand you're looking for help with [brief issue].
+Thank you for getting in touch about [website / website care / managed website / Microsoft 365 support].
 
-To assess whether we can help, could you share approximately how many Microsoft 365 users are involved and whether you need a review, a configuration project or ongoing assistance? Please don't send passwords or confidential documents by email.
+To understand the requirement, could you briefly share your business website (if you have one), the main goal, approximate number of pages, and any important features or launch dates? For an existing site, please mention its platform if known.
 
-If this fits our scope, I'll outline the next steps and provide a written proposal before any work begins.
+Please don't email passwords or sensitive customer information. Once the scope is clear, we can discuss an appropriate proposal and next steps.
 
 Kind regards,
-[Name]
-Keldmere Technology | Webify Limited
+[Founder name]
+Keldmere | Webify Limited
 
-## Qualification gate
-- Legitimate business enquiry and contact?
-- Relevant service and technical capability?
-- Scope, dependencies, timing and procurement authority known?
-- Permissions and security requirements manageable?
-- Written proposal and acceptance before obtaining access?
+## Internal qualification checklist
+- Legitimate business and authorised decision-maker?
+- Appropriate service and demonstrable capacity?
+- For design: supplied copy/branding, scope, number of pages, integrations, launch expectations?
+- For care: platform and condition reviewed; existing responsibilities understood?
+- For subscription: ownership, minimum term and exit conditions can be clearly contracted?
+- For M365: tenant/users and permissions scoped before requesting access?
+- Proposal, tax terms and formal company identity verified before selling?
 
-## Next steps
-Qualify -> written scope/quote -> acceptance -> approved secure access -> work -> documented handover -> invoice/follow-up.
+**Workflow:** enquiry → qualification → written scoped quote → acceptance → approved work → validation/handover → invoice/follow-up.
 
-No automated outreach or promises of response SLAs until processes are proven.
+No implied response-time SLA, automated CRM or confirmed business name filing.
