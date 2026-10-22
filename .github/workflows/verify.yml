@@ -19,6 +19,8 @@ jobs:
         run: npm install --no-audit --no-fund
       - name: Audit image asset budget
         run: node scripts/audit-image-assets.mjs
+      - name: Audit business and portfolio consistency
+        run: node scripts/audit-business-consistency.mjs
       - name: Build static export
         run: npm run build
       - name: Verify exported page
