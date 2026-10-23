@@ -21,6 +21,8 @@ jobs:
         run: node scripts/audit-image-assets.mjs
       - name: Audit business and portfolio consistency
         run: node scripts/audit-business-consistency.mjs
+      - name: Verify provisional economics calculations
+        run: node scripts/test-evaluate-package-economics.mjs
       - name: Build static export
         run: npm run build
       - name: Verify exported page
