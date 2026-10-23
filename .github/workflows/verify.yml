@@ -23,6 +23,8 @@ jobs:
         run: node scripts/audit-business-consistency.mjs
       - name: Verify provisional economics calculations
         run: node scripts/test-evaluate-package-economics.mjs
+      - name: Verify VERIDRA to quote operating boundaries
+        run: node scripts/audit-phase3-workflow.mjs
       - name: Build static export
         run: npm run build
       - name: Verify exported page
