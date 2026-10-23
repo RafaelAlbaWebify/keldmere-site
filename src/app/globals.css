@@ -291,3 +291,9 @@
 .k-service-grid p{font-size:14px;line-height:1.6;color:#52605a;margin:0 0 24px}
 .k-service-grid a{margin-top:auto;font-size:12px;color:#275442;font-weight:700;border-bottom:1px solid}
 @media(max-width:700px){.k-service-intro{padding-top:44px;padding-bottom:58px}.k-service-grid{grid-template-columns:1fr}.k-service-grid article{min-height:0;padding:24px}.k-service-grid h3{font-size:27px;margin-top:13px}}
+
+/* Cropped hero-only design studies: keep landscape images legible, without large empty gutters. */
+.k-premium-reel{height:clamp(250px,25vw,370px)}
+.k-premium-frame img{object-fit:contain;object-position:center;background:#eae9e4}
+@media(min-width:1001px){.k-feature-art.k-premium-reel{height:clamp(260px,25vw,370px)}}
+@media(max-width:650px){.k-feature-art.k-premium-reel{height:160px}.k-premium-frame figcaption{padding:14px 10px 8px}.k-premium-frame figcaption strong{font-size:11px}}
