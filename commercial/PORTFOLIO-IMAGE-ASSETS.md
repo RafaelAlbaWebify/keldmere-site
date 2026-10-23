@@ -25,3 +25,6 @@ Use original generated work or photos licensed for commercial use, recording ass
 2. Playwright confirms the three images are fetched and returns valid image responses.
 3. Human review signs off on mobile and desktop screenshots, captions and link destinations.
 4. Any legal/ethical concern about AI depictions of people, professional status or property is resolved before publication.
+
+## October 23 claim-safe replacement
+The three production WebPs were replaced on the development branch by tighter, hero-only crops of the same AI-generated designs. Their original unverified award, experience, review and numerical claims were located in the discarded lower portions. These files remain **fictional design studies** and are not actual client websites. Their display crop and small-screen readability still require a fresh Playwright screenshot review.
