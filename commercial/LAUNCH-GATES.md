@@ -45,3 +45,14 @@ Latest visual QA artifact: GitHub Actions run 39990205891, commit 97c67b5. All a
 - [ ] Approve actual 1440px and 390px screenshot crops. Browser automation confirms loading and layout, not factual truth inside AI-generated images.
 
 This is a **commercial trust blocker**, separate from successful CI.
+
+## Phase 2 package economics (23 Oct 2026)
+
+- [x] Service/package boundaries and unsupported assumptions documented in `commercial/PACKAGE-SCOPE-DECISION-MATRIX.md`.
+- [x] Measurement protocol in `commercial/UNIT-ECONOMICS-PILOT.md`.
+- [x] Hypothetical sensitivity examples in `commercial/economics-scenario.example.json` with automated test `scripts/test-evaluate-package-economics.mjs`.
+- [ ] Actual build and care time measurements: **no verified dataset supplied**.
+- [ ] Real operating/hosting/payment/provider costs and owner-approved minimum margin/rate.
+- [ ] Precise revision, hosting, backup, supported-stack, cancellation, price/tax and renewal terms approved for client use.
+
+**Status:** phase 2 tooling and evidence framework built; pricing and margin validation **not complete**. Do not infer profitability from the examples or approve the public price floor solely on that basis.
