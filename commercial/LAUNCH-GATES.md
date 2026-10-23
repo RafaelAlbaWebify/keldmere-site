@@ -35,3 +35,13 @@ Passing GitHub Actions does **not** mean the business or website is cleared to l
 - [ ] Explicit approval for DNS changes, HTTPS review and removal of `noindex`.
 
 **Rule:** Do not describe this branch as production-ready until critical technical, commercial and legal items have evidence and approval.
+
+## Portfolio-claim review (23 Oct 2026)
+
+Latest visual QA artifact: GitHub Actions run 39990205891, commit 97c67b5. All automated smoke checks passed. Direct inspection of the 1440px screenshot confirms the premium images appear, but generated design artwork may contain invented law-firm awards, client totals, years of experience, patient-review claims or professional association marks **within the pixels**. Those claims are not evidence of Keldmere clients or accredited sample businesses.
+
+- [ ] Inspect all three premium WebP images at native resolution for fictitious credentials, statistics, logos, awards, reviews and confusing text.
+- [ ] Replace or edit any problematic artwork, or present it in a way that cannot be mistaken for a real client achievement, before publication.
+- [ ] Approve actual 1440px and 390px screenshot crops. Browser automation confirms loading and layout, not factual truth inside AI-generated images.
+
+This is a **commercial trust blocker**, separate from successful CI.
