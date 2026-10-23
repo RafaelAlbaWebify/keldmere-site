@@ -297,3 +297,7 @@
 .k-premium-frame img{object-fit:contain;object-position:center;background:#eae9e4}
 @media(min-width:1001px){.k-feature-art.k-premium-reel{height:clamp(260px,25vw,370px)}}
 @media(max-width:650px){.k-feature-art.k-premium-reel{height:160px}.k-premium-frame figcaption{padding:14px 10px 8px}.k-premium-frame figcaption strong{font-size:11px}}
+
+/* Final claim-safe image review: tighter artwork stage, less unused letterbox. */
+.k-feature-art.k-premium-reel{height:220px}
+@media(max-width:650px){.k-feature-art.k-premium-reel{height:128px}}
