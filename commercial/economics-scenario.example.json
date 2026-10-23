@@ -1,0 +1,24 @@
+{
+  "scenario_kind": "hypothetical_example_not_actuals",
+  "currency": "USD",
+  "offers": [
+    {
+      "name": "Starter 12-hour sensitivity",
+      "revenue_ex_tax": 599,
+      "delivery_hours": 12,
+      "direct_costs": 0
+    },
+    {
+      "name": "Starter 20-hour sensitivity",
+      "revenue_ex_tax": 599,
+      "delivery_hours": 20,
+      "direct_costs": 0
+    },
+    {
+      "name": "Managed 12-month sensitivity",
+      "revenue_ex_tax": 1188,
+      "delivery_hours": 18,
+      "direct_costs": 0
+    }
+  ]
+}
