@@ -6,7 +6,7 @@ const economic=read("commercial/UNIT-ECONOMICS-PILOT.md");
 const proposal=read("commercial/PROPOSAL-TEMPLATE.md");
 const page=read("src/app/page.tsx");
 const checks={
-operatorBoundary:guide.includes("process-level")&&guide.includes("loopback"),
+operatorBoundary:guide.includes("process-level")&&guide.includes("127.0.0.1:8010"),
 noAutomatedPricing:guide.includes("not** hours, price")&&guide.includes("operator approves"),
 externalAcceptance:guide.includes("external signed terms")&&drill.includes("NOT RECEIVED"),
 customerScope:proposal.includes("Agreed scope")&&proposal.includes("Ownership, hosting"),
