@@ -67,3 +67,18 @@ This is a **commercial trust blocker**, separate from successful CI.
 - [ ] Production approval of pricing, legal terms and privacy remains a separate requirement.
 
 **Phase 3:** documented technical/workflow integration ready for local acceptance; actual end-to-end operational acceptance still open.
+
+## Prepublication batch (23 October 2026)
+
+- [x] Legal name clarified by operator-provided company-overview screenshot: **WEBIFY LIMITED**, incorporation 10 April 2024, company number **761605**, registered office **Unit 2, 2 Bridge Street, Athlone, Co. Westmeath, N37 F1W4, Ireland**. This is operator evidence, not yet an independent current CRO confirmation.
+- [x] Public company page, enquiry privacy draft and homepage footer updated to contain matching company particulars.
+- [x] Public page now labels portfolio images as fictional design studies; prices visibly described as indicative and dependent on written scope.
+- [x] Static consistency checks extended to company details, privacy, transparency and price disclaimer.
+- [ ] Confirm *current* identity/address in CRO and whether **Keldmere** is registered as a business name (or complete registration) before trading under the brand.
+- [ ] Approve actual privacy retention period, controller legal basis, processor contracts and international transfer details (Namecheap/Gmail/Brevo/GitHub Pages), and publish complete notice; the current draft still explicitly discloses unresolved details.
+- [ ] Resolve planned VAT/tax presentation and customer service terms before accepting a paid order. Displayed entry prices remain indicative.
+- [ ] Confirm mailbox deliverability/authentication and actual user-initiated mailto behaviour on common client devices.
+- [ ] Approve full visual/functional QA and latest CI head; fix any issues before a launch decision.
+- [ ] **Separate, explicit permission** for PR merge, GitHub Pages, domain DNS and indexing. No publication authorised by this prelaunch batch.
+
+This checklist distinguishes **implemented draft** from **legally approved publication copy**.
