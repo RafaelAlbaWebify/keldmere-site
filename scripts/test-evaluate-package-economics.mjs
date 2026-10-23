@@ -1,0 +1,10 @@
+import {spawnSync} from "node:child_process";
+import {strict as assert} from "node:assert";
+const r=spawnSync(process.execPath,["scripts/evaluate-package-economics.mjs","commercial/economics-scenario.example.json"],{encoding:"utf8"});
+assert.equal(r.status,0,r.stderr);
+const out=JSON.parse(r.stdout);
+assert.equal(out.classification,"hypothetical_example_not_actuals");
+assert.equal(out.rows[0].contribution_per_hour,49.92);
+assert.equal(out.rows[1].contribution_per_hour,29.95);
+assert.equal(out.rows[2].contribution_per_hour,66);
+console.log("Economics scenario arithmetic: PASS (hypothetical, not actual performance)");
