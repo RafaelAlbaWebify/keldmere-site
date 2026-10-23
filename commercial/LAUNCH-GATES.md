@@ -56,3 +56,14 @@ This is a **commercial trust blocker**, separate from successful CI.
 - [ ] Precise revision, hosting, backup, supported-stack, cancellation, price/tax and renewal terms approved for client use.
 
 **Status:** phase 2 tooling and evidence framework built; pricing and margin validation **not complete**. Do not infer profitability from the examples or approve the public price floor solely on that basis.
+
+## Phase 3 Keldmere → VERIDRA delivery process (23 Oct 2026)
+- [x] Reconciled VERIDRA current `README.md`, operator workflow audit and commercial offer with Keldmere lead process.
+- [x] Defined internal assessment-to-quote workflow in `commercial/VERIDRA-QUOTE-WORKFLOW.md`; VERIDRA public audit findings inform manual scope, effort estimation and operator-approved pricing, not an unverified automatic price.
+- [x] Created an evidence-conscious acceptance drill `commercial/PHASE3-ACCEPTANCE-DRILL.md` and CI contract test.
+- [ ] **Run actual local Windows operator acceptance** against a permitted public target and capture evidence of transitions and output (cannot be established from GitHub source alone).
+- [ ] Confirm company identity discrepancy: Keldmere names Webify Limited; VERIDRA commercial offer names Webify Digital Solutions Ltd. Verify official corporate name before using contract documents.
+- [ ] Validate Keldmere mailbox intake, proposal acceptance and external invoice/payment reference handling in a representative real workflow.
+- [ ] Production approval of pricing, legal terms and privacy remains a separate requirement.
+
+**Phase 3:** documented technical/workflow integration ready for local acceptance; actual end-to-end operational acceptance still open.
