@@ -25,6 +25,6 @@ check("Design studies incorrectly presented as customer proof",homepage.includes
 check("Pricing disclaimer absent",homepage.includes("Indicative starting prices")&&homepage.includes("written scope"));
 check("Privacy missing processing and rights context",privacy.includes("Data Protection Commission")&&privacy.includes("Namecheap")&&privacy.includes("Gmail"));
 check("Prelaunch privacy control plan missing",read("commercial/PRIVACY-OPERATIONAL-ACCEPTANCE.md").includes("12 months")&&privacy.includes("12 months"));
-check("Commercial decision document missing",read("commercial/PRELAUNCH-COMMERCIAL-DECISION.md").includes("conditional approval")&&read("src/app/working-with-us/page.tsx").includes("Website projects"));
+check("Commercial decision document missing",read("commercial/PRELAUNCH-COMMERCIAL-DECISION.md").includes("conditional approval")&&read("src/app/working-with-us/page.tsx").includes("For starter projects"));
 console.log(JSON.stringify({checks:17,issues,pass:issues.length===0},null,2));
 if(issues.length)process.exitCode=1;
