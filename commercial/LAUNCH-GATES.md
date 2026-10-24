@@ -82,3 +82,13 @@ This is a **commercial trust blocker**, separate from successful CI.
 - [ ] **Separate, explicit permission** for PR merge, GitHub Pages, domain DNS and indexing. No publication authorised by this prelaunch batch.
 
 This checklist distinguishes **implemented draft** from **legally approved publication copy**.
+
+## Privacy and commercial pre-registration batch — 24 October 2026
+- [x] Public enquiry privacy copy expanded: controller, contact, requested-quote bases, recipient categories, transfer uncertainty, rights and proposed 12-month unsuccessful-enquiry retention rule.
+- [x] Proposed actual mailbox implementation and provider verification captured in `commercial/PRIVACY-OPERATIONAL-ACCEPTANCE.md`.
+- [x] Website-specific commercial process and scope/quote boundaries clarified; indicative floors documented in `commercial/PRELAUNCH-COMMERCIAL-DECISION.md`.
+- [ ] Confirm provider contracts, transfer safeguards and actual processing locations; implement the retention rule before claiming it as established practice.
+- [ ] Owner approves proposed privacy basis, retention, public prices and individual binding terms.
+- [ ] Keldmere business-name registration and current CRO particulars still require confirmation.
+
+**Status:** policy and commercial recommendations prepared, not a completed legal review or owner sign-off. Site remains draft and `noindex` is retained.
