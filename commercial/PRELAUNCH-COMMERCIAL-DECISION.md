@@ -27,3 +27,10 @@ The 9–18h and 40 USD/h figures above are **modelling assumptions**; no client 
 Publishing a brochure website with a `mailto` quote CTA is different from opening checkout, processing payment or presenting a binding online offer. We recommend only the former. No instant sales, auto-renewal enrollment or contractual acceptance mechanism is implemented.
 
 **Operator decision required:** approve published price positioning and the concrete legal/tax terms, not the hypothetical margins as proven results.
+
+## Prelaunch decision — 24 October 2026
+**Approved as a provisional public-site positioning recommendation:** display the existing "from" prices as **indicative quotation starting points only**, without checkout, deposits, instant contract acceptance, guaranteed timelines or unqualified service promises. The website copy and plans remain aligned with this recommendation. A request for a quote is not an order.
+
+**Not approved as binding terms:** fixed delivery price for an uninspected project; customer-specific VAT outcome; 12-month recurring contract enforcement; refund/cancellation/legal terms; third-party fees; exact care checklist or SLA. Those require actual quotation and operator review.
+
+**Authority boundary:** the operator's instruction authorises completing a preparatory commercial review, not certifying unknown taxes or signing enforceable contract terms for WEBIFY LIMITED. The published starting prices can be treated as a proposed initial marketing strategy once the operator signs off the website; avoid any claim that measured margins have been established.
