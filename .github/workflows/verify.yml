@@ -1,0 +1,62 @@
+name: Verify static website and visual QA
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  build-and-visual-qa:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Install website dependencies
+        run: npm install --no-audit --no-fund
+      - name: Audit image asset budget
+        run: node scripts/audit-image-assets.mjs
+      - name: Audit business and portfolio consistency
+        run: node scripts/audit-business-consistency.mjs
+      - name: Verify provisional economics calculations
+        run: node scripts/test-evaluate-package-economics.mjs
+      - name: Verify VERIDRA to quote operating boundaries
+        run: node scripts/audit-phase3-workflow.mjs
+      - name: Build static export
+        run: npm run build
+      - name: Verify exported page
+        run: test -f out/index.html
+      - name: Install Playwright and Chromium
+        run: |
+          npm install --no-save --no-audit --no-fund playwright@1.55.1
+          npx playwright install --with-deps chromium
+      - name: Serve exported static site and wait for response
+        run: |
+          python3 -m http.server 3000 --directory out > /tmp/keldmere-static.log 2>&1 &
+          for i in $(seq 1 40); do
+            if curl --fail --silent http://127.0.0.1:3000/ > /dev/null; then exit 0; fi
+            sleep 2
+          done
+          cat /tmp/keldmere-static.log
+          exit 1
+      - name: Capture 4 viewports and test overflow/errors
+        run: node scripts/capture-visual-qa.mjs
+      - name: Audit release blockers (informational during development)
+        run: node scripts/audit-launch.mjs
+      - name: Upload launch audit
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: keldmere-launch-audit
+          path: launch-audit.json
+          if-no-files-found: warn
+      - name: Upload visual screenshots and report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: keldmere-visual-qa
+          path: qa-screenshots/
+          if-no-files-found: warn
