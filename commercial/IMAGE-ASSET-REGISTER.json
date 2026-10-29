@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "assets": [
+    {
+      "path": "public/images/everwell-ai-study.svg",
+      "source": "ChatGPT AI-generated portfolio concept, 2026-10-21",
+      "type": "ai_generated",
+      "usage_basis": "Original fictional design-study artwork; no real studio or client depicted",
+      "approved_for_demo": true
+    },
+    {
+      "path": "public/images/fieldwork-ai-study.svg",
+      "source": "ChatGPT AI-generated portfolio concept, 2026-10-21",
+      "type": "ai_generated",
+      "usage_basis": "Original fictional architectural illustration; not a built project",
+      "approved_for_demo": true
+    },
+    {
+      "path": "public/images/hartwell-premium.webp",
+      "source": "ChatGPT AI-generated original website design, 2026-10-21; cropped for claims review 2026-10-23",
+      "type": "ai_generated",
+      "usage_basis": "Original illustrative legal services website design; sample brand, not commissioned client work; crop excludes lower sections that contained unsupported claims; final human visual review still required",
+      "approved_for_demo": true
+    },
+    {
+      "path": "public/images/brightsmile-premium.webp",
+      "source": "ChatGPT AI-generated original website design, 2026-10-21; cropped for claims review 2026-10-23",
+      "type": "ai_generated",
+      "usage_basis": "Original illustrative dental clinic website design; sample brand, not commissioned client work; crop excludes lower sections that contained unsupported claims; final human visual review still required",
+      "approved_for_demo": true
+    },
+    {
+      "path": "public/images/atrium-premium.webp",
+      "source": "ChatGPT AI-generated original website design, 2026-10-21; cropped for claims review 2026-10-23",
+      "type": "ai_generated",
+      "usage_basis": "Original illustrative architecture studio website design; sample brand, not commissioned client work; crop excludes lower sections that contained unsupported claims; final human visual review still required",
+      "approved_for_demo": true
+    }
+  ],
+  "notes": "Each image in public/images must have a matching registered path, source, type (ai_generated or licensed_photo), usage_basis and approved_for_demo."
+}
