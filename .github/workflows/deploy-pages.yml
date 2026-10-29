@@ -13,7 +13,7 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  deploy:
+  build-and-deploy:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -23,6 +23,22 @@ jobs:
       pages: write
       id-token: write
     steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Install website dependencies
+        run: npm install --no-audit --no-fund
+      - name: Run launch consistency audits
+        run: |
+          node scripts/audit-image-assets.mjs
+          node scripts/audit-business-consistency.mjs
+          node scripts/test-evaluate-package-economics.mjs
+          node scripts/audit-phase3-workflow.mjs
+      - name: Build static export
+        run: npm run build
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
       - name: Upload static site
